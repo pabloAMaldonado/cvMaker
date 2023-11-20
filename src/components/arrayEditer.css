@@ -1,0 +1,10 @@
+.headerInput{
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+.workEditer>div>.headerInput{
+    width: 100%;
+    display: flex;
+    align-items: center;
+}

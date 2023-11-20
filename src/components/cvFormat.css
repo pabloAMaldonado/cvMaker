@@ -1,0 +1,130 @@
+
+
+.infoContacto{
+    display: flex;
+    flex-direction: column;
+}
+.infoContacto>h2{
+    align-self: center;
+    padding: 10px;
+}
+.infoContacto>span{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+    margin: 0 10px;
+    height: 35px;
+}
+.infoContacto>span>img{
+    width: 15px;
+    height: 15px;
+}
+.infoContacto>ul{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 0;
+}
+.infoContacto > ul > li::before {
+    content: '- ';
+}
+/*  TRABAJOS */
+.workInfo>h2{
+    padding: 10px 5px 0 5px;
+}
+.trabajo{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.headerWork{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0 10px;
+}
+.headerWork>span{
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+}
+.headerWork>span:nth-child(2){
+    margin-left: auto;
+}
+.work>ul{
+    margin: 0 60px;
+}
+.work>ul>li{
+    list-style-type: disc;
+}
+
+/* ESTUDIOS */
+.eduInfo>h2{
+    padding: 10px 5px 0 5px;
+}
+.estudios{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.headerEdu{
+    display: flex;
+    flex-direction: row;
+}
+.headerEdu>div{
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    margin: 0 10px;
+}
+.headerEdu>div:nth-child(2){
+    margin-left: auto;
+}
+.edu>p{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 10px 20px 0 20px;
+}
+/* PROJECTOS PERSONALES */
+.projPersonales>h2{
+    padding: 10px 5px 0 5px;
+}
+.projectos{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.headerPp{
+    display: flex;
+    flex-direction: column;
+    margin: 0 10px;
+    gap: 10px;
+}
+.headerPp>h2:nth-child(2){
+    margin: 0 10px;
+}
+.pp>ul{
+    list-style-type: disc;
+    margin: 0 60px;
+}
+/* SKILLZ */
+.skillList>h2{
+    padding: 10px 5px 0 5px;
+}
+.skills{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.skill{
+    display: flex;
+    flex-direction: row;
+    margin: 0 10px;
+    gap: 10px;
+}

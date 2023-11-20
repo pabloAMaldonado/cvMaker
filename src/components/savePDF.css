@@ -1,0 +1,6 @@
+.buttonDownload>button{
+    background: linear-gradient(45deg, black, transparent);
+    width: 30px;
+    padding: 10px;
+    border-radius: 10px;
+}
