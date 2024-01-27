@@ -10,21 +10,24 @@ function EduHandler({data, setData}){
             {data.eduArray.map((array, index) => (
               <div key={index} className="edu">
                 <div className="headerEdu">
-                            <div>
-                                <h2>{array.institucion}</h2>
-                                {array.carrera !== '' &&(
-                                    <h2> - {array.carrera}</h2>
-                                )}
+                            <span className='topTxt topTxtEdu'>
                                 
-                            </div>
-                            <div>
+                                    <h2>{array.institucion}</h2>
+                                    {array.carrera !== '' &&(
+                                        <h2>  {array.carrera}</h2>
+                                    )}
+                                    
+                            </span>
+                            <span>
                                 <h2>{array.fromDateUni}</h2>
                                 {array.toDateUni !== '' &&(
-                                    <h2>- {array.toDateUni}</h2>
+                                    <h2>-</h2>
                                 )}
-                            </div>
+                                 {array.toDateUni !== '' &&(
+                                    <h2>{array.toDateUni}</h2>
+                                )}
+                            </span>
                         </div>
-                        {array.descUni !== '' &&(<p>{array.descUni}</p>)}
               </div>
             ))}
           </div>

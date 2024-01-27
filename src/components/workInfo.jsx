@@ -21,8 +21,10 @@ function ContactWork({company, setCompany, location, setLocation, fromDate, setF
           cargo: cargo,
           importantes: importantes
         };
-        dataUpdater.arrayUpdater(trabajo, 'workArray')
 
+        dataUpdater.arrayUpdater(trabajo, 'workArray')
+        
+        console.log(data)
         setCompany('');
         setLocation('');
         setFromDate('');
@@ -41,6 +43,7 @@ function ContactWork({company, setCompany, location, setLocation, fromDate, setF
         }));
   
       }
+      
       function handleImportanteChange(index, e) {
         const updatedImportante = [...importantes];
         updatedImportante[index] = e.target.value;

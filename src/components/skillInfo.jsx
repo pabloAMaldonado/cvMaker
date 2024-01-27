@@ -14,10 +14,12 @@ function SkillInfo({skillName, setSkillName, descSkill, setdescSkill, array, set
         e.preventDefault();
 
         const skill= {
-        skillName: skillName,
-        descSkill: descSkill
-      };
-
+          skillName: skillName,
+          descSkill: descSkill
+        };
+      console.log(skill)
+      console.log(array)
+      
       dataUpdater.arrayUpdater(skill, 'skillArray')
 
       setSkillName('');
@@ -25,8 +27,8 @@ function SkillInfo({skillName, setSkillName, descSkill, setdescSkill, array, set
 
       setData(prevData => ({
         ...prevData,
-        setSkillName: '',
-        setdescSkill: ''
+        skillName: '',
+        descSkill: ''
       }));
 
       }
@@ -55,15 +57,15 @@ function SkillInfo({skillName, setSkillName, descSkill, setdescSkill, array, set
           />
         </div>
         <button type="submit">Enviar</button>
-            </form>
-            <ArrayEditer
+      </form>
+      <ArrayEditer
         data={data}
         setData={setData}
         array={'skillArray'}
         setSetter={isExpandedArraySkill}
-        isExpanded={setIsExpandedArraySkill}
+       isExpanded={setIsExpandedArraySkill}
       />
-        </Collapse>
+      </Collapse>
     )
 }
 

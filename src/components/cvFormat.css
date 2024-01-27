@@ -1,5 +1,15 @@
 
+.cVDisplayer{
+    padding: 20px;
+}
 
+.textHeader{
+    font-weight: bolder;
+    margin-left: 20px;
+}
+
+
+/* CONTACTO NOMBRE  */
 .infoContacto{
     display: flex;
     flex-direction: column;
@@ -8,31 +18,49 @@
     align-self: center;
     padding: 10px;
 }
-.infoContacto>span{
+.datosContacto{
     display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+}
+.datosContacto>span{
+    display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     align-items: center;
     gap: 15px;
-    margin: 0 10px;
+    margin: 0 30px;
     height: 35px;
 }
-.infoContacto>span>img{
+.datosContacto>span>img{
     width: 15px;
     height: 15px;
 }
-.infoContacto>ul{
+.datosContacto>ul{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
     padding: 0;
 }
-.infoContacto > ul > li::before {
+.datosContacto > ul > li::before {
     content: '- ';
 }
+
+
+
+                                                                                                            
 /*  TRABAJOS */
 .workInfo>h2{
     padding: 10px 5px 0 5px;
+}
+.topTxt{
+    align-items: center;
+    font-weight: bolder;
+}
+.topTxt *{
+    margin: 0 5px 5px 5px;
 }
 .trabajo{
     display: flex;
@@ -46,20 +74,31 @@
     justify-content: space-between;
     padding: 0 10px;
 }
+.headerWork>.topTxt+span>h2:nth-child(2){
+    margin: 0 5px;
+}
 .headerWork>span{
     display: flex;
     flex-direction: row;
-    gap: 5px;
 }
 .headerWork>span:nth-child(2){
     margin-left: auto;
 }
 .work>ul{
     margin: 0 60px;
+    margin-top: 5px;
 }
 .work>ul>li{
     list-style-type: disc;
 }
+.work>ul>li:not(:last-child){
+    margin-bottom: 5px;
+}
+
+
+
+
+
 
 /* ESTUDIOS */
 .eduInfo>h2{
@@ -70,24 +109,27 @@
     flex-direction: column;
     gap: 10px;
 }
-
+.topTxtEdu>h2{
+    margin-bottom: 5px;
+}
+.topTxtEdu>h2:nth-child(2){
+    font-weight: lighter;
+}
 .headerEdu{
     display: flex;
     flex-direction: row;
-}
-.headerEdu>div{
-    display: flex;
-    flex-direction: row;
-    gap: 5px;
-    margin: 0 10px;
-}
-.headerEdu>div:nth-child(2){
-    margin-left: auto;
-}
-.edu>p{
-    display: flex;
     flex-wrap: wrap;
-    margin: 10px 20px 0 20px;
+    justify-content: space-between;
+    padding: 0 10px;
+}
+
+.headerEdu>span:nth-child(2){
+    margin-left: auto;
+    display: flex;
+    flex-direction: row
+}
+.headerEdu>span:nth-child(2)>h2:nth-child(2){
+    margin: 0 5px
 }
 /* PROJECTOS PERSONALES */
 .projPersonales>h2{
@@ -96,14 +138,14 @@
 .projectos{
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 5px;
 }
 
 .headerPp{
     display: flex;
     flex-direction: column;
     margin: 0 10px;
-    gap: 10px;
+    gap: 5px;
 }
 .headerPp>h2:nth-child(2){
     margin: 0 10px;
@@ -125,6 +167,11 @@
 .skill{
     display: flex;
     flex-direction: row;
-    margin: 0 10px;
-    gap: 10px;
+    margin: 0 10px 5px 10px;
+}
+.skill>h2:first-child{
+    font-weight: bolder;
+}
+.skill>h2:nth-child(2){
+    margin: 0 5px;
 }

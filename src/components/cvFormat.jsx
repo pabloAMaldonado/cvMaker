@@ -20,32 +20,34 @@ function CvFormat({data, setData}
     return(
         <div className="cVDisplayer" id='cVDisplayer'>
             <div className="infoContacto">
-                <h2>{data.nombre}</h2>
+                <h2 className='textHeader'>{data.nombre}</h2>
 
-                {data.celular !== '' && (
-                <span>
-                    <img src={Phone} alt="celular" />
-                    <h3>{data.celular}</h3>
-                </span>
-                )}
+                <div className="datosContacto">
+                    {data.celular !== '' && (
+                    <span>
+                        <img src={Phone} alt="celular" />
+                        <h3>{data.celular}</h3>
+                    </span>
+                    )}
 
-                {data.email !== '' && (
-                <span>
-                    <img src={Mail} alt="email" />
-                    <h3>{data.email}</h3>
-                </span>
-                )}
-                
-                {data.links[0] !== '' &&(
-                <ul className="links">
-                {data.links.map((link, index) => (
-                <li key={index}>{link}</li>
-                ))}
-                </ul>)}
+                    {data.email !== '' && (
+                    <span>
+                        <img src={Mail} alt="email" />
+                        <h3>{data.email}</h3>
+                    </span>
+                    )}
+                    
+                    {data.links[0] !== '' &&(
+                    <ul className="links">
+                    {data.links.map((link, index) => (
+                    <li key={index}>{link}</li>
+                    ))}
+                    </ul>)}
+                </div>
                 
             </div>
             <div className="workInfo">
-                <h2>Experiencia Laboral</h2>
+                <h2 className='textHeader'>Experiencia Laboral</h2>
                 <hr />
                 <div className="trabajo">
                         <WorkHandler
@@ -54,14 +56,20 @@ function CvFormat({data, setData}
                         />
                         <div className="work">
                         <div className="headerWork">
-                            <span>
-                            <h2>{data.company} </h2>
-                            {data.location !== '' &&(
-                                <h2>  - {data.location}</h2>
-                            )}
-                            {data.cargo !== '' &&(
-                                 <h2> |  {data.cargo}</h2>
-                            )}
+                            <span className='topTxt'>
+                                <h2>{data.company} </h2>
+                                {data.location !== '' &&(
+                                    <h2>-</h2>
+                                )}
+                                {data.location !== '' &&(
+                                    <h2>{data.location}</h2>
+                                )}
+                                {data.cargo !== '' &&(
+                                    <p>|</p>
+                                )}
+                                {data.cargo !== '' &&(
+                                    <h2>   {data.cargo}</h2>
+                                )}
                             </span>
                             <span>
                             <h2>{data.fromDate}</h2>
@@ -70,6 +78,7 @@ function CvFormat({data, setData}
                             )}
                             </span>
                         </div>
+                        
                             {data.importantes[0] !== '' &&(
                                 <ul>
                                 {data.importantes.map((elemento, index) => (
@@ -81,7 +90,7 @@ function CvFormat({data, setData}
                 </div>
             </div>
             <div className="eduInfo">
-                <h2>Educacion</h2>
+                <h2 className='textHeader'>Educacion</h2>
                 <hr />
                 <div className="estudios">
                         <EduHandler
@@ -90,26 +99,28 @@ function CvFormat({data, setData}
                         />
                         <div className="edu">
                         <div className="headerEdu">
-                            <div>
-                                <h2>{data.institucion}</h2>
-                                {data.carrera !== '' &&(
-                                    <h2> - {data.carrera}</h2>
-                                )}
-                                
-                            </div>
-                            <div>
+                            <span className='topTxt topTxtEdu'>
+                                    <h2>{data.institucion}</h2>
+                                    {data.carrera !== '' &&(
+                                        <h2>  {data.carrera}</h2>
+                                    )}
+                                    
+                            </span>
+                            <span>
                                 <h2>{data.fromDateUni}</h2>
                                 {data.toDateUni !== '' &&(
-                                    <h2>- {data.toDateUni}</h2>
+                                    <h2>-</h2>
                                 )}
-                            </div>
+                                 {data.toDateUni !== '' &&(
+                                    <h2>{data.toDateUni}</h2>
+                                )}
+                            </span>
                         </div>
-                        {data.descUni !== '' &&(<p>{data.descUni}</p>)}
                         </div>
                 </div>
             </div>
             <div className="projPersonales">
-                <h2>Projectos Personales</h2>
+                <h2 className='textHeader'>Projectos Personales</h2>
                 <hr />
                 <div className="projectos">
                         <PpHandler
@@ -118,9 +129,9 @@ function CvFormat({data, setData}
                         />
                        <div className="pp">
                         <div className="headerPp">
-                                <h2>{data.proyectName}</h2>
+                                <h2 className='topTxt'>{data.proyectName}</h2>
                                 {data.descProyect !== '' &&(
-                                    <h2> - {data.descProyect}</h2>
+                                    <h2>   {data.descProyect}</h2>
                                 )}
                         </div>
                         {data.importanteProyect[0] !== '' &&(
@@ -134,7 +145,7 @@ function CvFormat({data, setData}
                 </div>
             </div>
             <div className="skillList">
-                <h2>Habilidades</h2>
+                <h2 className='textHeader'>Habilidades</h2>
                 <hr />
                 <div className="skills">
                     <SkillHandler
@@ -142,9 +153,12 @@ function CvFormat({data, setData}
                             setData={setData}
                       />
                     <div className="skill">
-                        <h2>{data.skillName}</h2>
+                        <h2 className='topTxt'>{data.skillName}</h2>
                         {data.descSkill !== '' &&(
-                            <h2>-  {data.descSkill}</h2>
+                            <h2>-</h2>
+                        )}
+                        {data.descSkill !== '' &&(
+                            <h2>{data.descSkill}</h2>
                         )}
                             
                     </div>

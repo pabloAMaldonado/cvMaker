@@ -12,7 +12,7 @@ function SavePDF(){
                 doc.save();
             },
             margin: 0,
-            width: 8.239,
+            width: 7.71,
             windowWidth: 595
             });
       };

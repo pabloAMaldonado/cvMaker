@@ -11,9 +11,10 @@ function PpHandler({data, setData}){
           {data.ppArray.map((array, index) => (
             <div key={index} className="pp">
                <div className="headerPp">
-                                <h2>{array.proyectName}</h2>
+                                <h2 className="topTxt">{array.proyectName}</h2>
+                               
                                 {array.descProyect !== '' &&(
-                                    <h2> - {array.descProyect}</h2>
+                                    <h2>{array.descProyect}</h2>
                                 )}
                         </div>
                         {array.importanteProyect[0] !== '' &&(

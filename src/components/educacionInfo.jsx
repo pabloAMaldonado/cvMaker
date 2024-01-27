@@ -5,7 +5,7 @@ import ArrayEditer from "./ArrayEditer";
 
 
 
-function EducacionInfo({institucion, setInstitucion, carrera, setCarrera, fromDateUni, setFromDateUni, toDateUni, setToDateUni, descUni, setDescUni,
+function EducacionInfo({institucion, setInstitucion, carrera, setCarrera, fromDateUni, setFromDateUni, toDateUni, setToDateUni,
    array, setArray,  setSetter, isExpanded, data, setData}){
     function handleInputChange(setter, e) {
         setter(e.target.value);
@@ -15,21 +15,23 @@ function EducacionInfo({institucion, setInstitucion, carrera, setCarrera, fromDa
         e.preventDefault();
 
         const edu= {
-        institucion: institucion,
-        carrera: carrera,
-        fromDateUni: fromDateUni,
-        toDateUni: toDateUni,
-        descUni: descUni
+          institucion: institucion,
+          carrera: carrera,
+          fromDateUni: fromDateUni,
+          toDateUni: toDateUni,
         };
 
-        dataUpdater.arrayUpdater(edu, 'eduArray')
+        console.log(edu)
+        console.log(array)
 
+        dataUpdater.arrayUpdater(edu, 'eduArray')
+        
+        console.log(data)
         setInstitucion('');
         setCarrera('');
-        fromDateUni('');
+        setFromDateUni('');
         setFromDateUni('');
         setToDateUni('');
-        setDescUni('');
 
         setData(prevData => ({
           ...prevData,
@@ -37,12 +39,11 @@ function EducacionInfo({institucion, setInstitucion, carrera, setCarrera, fromDa
           carrera: '',
           fromDateUni: '',
           toDateUni: '',
-          descUni: ''
         }));
-        }      
+        }     
+
       const dataUpdater = new DataUpdater(data, setData);
       const [isExpandedArrayEdu, setIsExpandedArrayEdu]= useState(false)
-
 
     return(
       <Collapse formName="Educacion" setSetter={setSetter} isExpanded={isExpanded}>
@@ -85,16 +86,6 @@ function EducacionInfo({institucion, setInstitucion, carrera, setCarrera, fromDa
             id="toDateUni"
             value={toDateUni}
             onChange={(e) => {handleInputChange(setToDateUni, e); dataUpdater.handleValueChange('toDateUni', e.target.value)  }}
-          />
-        </div>
-
-        <div>
-          <label htmlFor="descUni">Descripcion:</label>
-          <input
-            type="text"
-            id="descUni"
-            value={descUni}
-            onChange={(e) => {handleInputChange(setDescUni, e); dataUpdater.handleValueChange('descUni', e.target.value)  }}
           />
         </div>
 

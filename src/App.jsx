@@ -28,7 +28,6 @@ function App() {
   const [carrera, setCarrera] = useState('');
   const [fromDateUni, setFromDateUni] = useState('');
   const [toDateUni, setToDateUni] = useState('');
-  const [descUni, setDescUni] = useState('');
 
   const [proyectName, setProyectName] = useState('');
   const [descProyect, setDescProyect] = useState('');
@@ -67,7 +66,6 @@ function App() {
     carrera: '',
     fromDateUni: '',
     toDateUni: '',
-    descUni: '',
     eduArray: [''],
     proyectName: '',
     descProyect: '',
@@ -128,14 +126,12 @@ function App() {
             carrera={carrera}
             fromDateUni={fromDateUni}
             toDateUni={toDateUni}
-            descUni={descUni}
             array={eduArray}
             setArray={setEduArray}
             setInstitucion={setInstitucion}
             setCarrera={setCarrera}
             setFromDateUni={setFromDateUni}
             setToDateUni={setToDateUni}
-            setDescUni={setDescUni}
             setSetter={setIsExpandedEi}
             isExpanded={isExpandedEi}
             data={data}

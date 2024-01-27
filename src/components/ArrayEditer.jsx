@@ -21,6 +21,7 @@ function ArrayEditer({data, setData, array, setSetter, isExpanded}){
             />
         )
     }else if( array == 'eduArray'){
+        console.log(data.eduArray)
         return(
             <EduEditer
                 data= {data}

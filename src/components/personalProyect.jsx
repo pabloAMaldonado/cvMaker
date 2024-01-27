@@ -28,6 +28,7 @@ function Pproyect({proyectName, setProyectName, descProyect, setDescProyect, imp
       setData(prevData => ({
         ...prevData,
         proyectName: '',
+        descProyect: '',
         importanteProyect: ['']
       }));
       

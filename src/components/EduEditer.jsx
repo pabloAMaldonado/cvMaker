@@ -45,11 +45,6 @@ function EduEditer({data, setData, isExpanded, setSetter}){
                         value={elemento['toDateUni']}
                         onChange={(e) => {dataUpdater.actualizarArray('eduArray', 'toDateUni', index, e.target.value)}}
                     ></textarea>
-                    <textarea 
-                        name="descUni"
-                        value={elemento['descUni']}
-                        onChange={(e) => {dataUpdater.actualizarArray('eduArray', 'descUni', index, e.target.value)}}
-                    ></textarea>
                     </Collapse>
                 </div>
                   ))}
